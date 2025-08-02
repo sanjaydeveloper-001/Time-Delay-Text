@@ -20,7 +20,7 @@ function MessageForm() {
         setSendMessage(message);
         setMessage("");
         setIsSending(false);
-      },delay * 1);
+      },delay * 1000);
 
       setTimerId(id);
     }
