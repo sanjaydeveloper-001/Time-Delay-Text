@@ -10,7 +10,7 @@ function Home() {
   const [startMessage , setStartMessage] = useState<boolean>(false);
 
   return (
-    <div className='w-[300px] h-[600px] rounded lg:rounded-[50px] px-2 py-1.5 relative flex items-center flex-col bg-white'>
+    <div className='w-[300px] h-[600px] rounded-[50px] px-2 py-1.5 relative flex items-center flex-col bg-white'>
         <img src={phone} className='w-full h-full absolute top-0 left-0 z-1' draggable={false} />
 
         <div className="absolute top-2 w-full h-max flex justify-between items-center pr-8 border-b-1">
