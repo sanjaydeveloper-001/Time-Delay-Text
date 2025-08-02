@@ -6,7 +6,7 @@ import { Textarea } from "./ui/textarea"
 function MessageForm() {
 
   const [message , setMessage] = useState<string>("");
-  const [delay , setDelay] = useState<number | 2>(2);
+  const [delay , setDelay] = useState<number>(2);
   const [isSending , setIsSending] = useState<boolean>(false);
   const [timerId , setTimerId] = useState<NodeJS.Timeout | null>(null);
   const [sendMessage , setSendMessage] = useState<string>("");
@@ -20,7 +20,7 @@ function MessageForm() {
         setSendMessage(message);
         setMessage("");
         setIsSending(false);
-      },delay * 1000);
+      },delay*1000);
 
       setTimerId(id);
     }
@@ -41,7 +41,7 @@ function MessageForm() {
         className="w-full h-50 overflow-x-hidden whitespace-pre-wrap break-words break-all"
         placeholder="Type your message..."
         value={message}
-        onChange={(e)=> {setMessage(e.target.value); setAlert(false)}}
+        onChange={(e)=> {setMessage(e.target.value); setAlert(false); setSendMessage("") }}
       />
       <Input
         type="number"
